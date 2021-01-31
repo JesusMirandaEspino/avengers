@@ -1,0 +1,242 @@
+$ git ls -al
+//Muestra todos los archivos de la carpeta
+
+$ git init 
+//Inicializa git
+
+$ git status
+//mustra el estado de los archivos
+
+
+$ git status -s
+//mustra solo los archivos modificados
+
+
+$ git add .
+//Agrega todos los archivos y esta pendiente de los cambios
+
+
+$ git checkout -- .
+//recupera la informacion a al ultimo commit
+
+$ git log
+//Muestra los commit y su historial
+
+
+$ git log --oneline
+//Muestra los commit y su historial mas compacto
+
+$ git add nombrearchivo.extension
+//Agregar archivos
+
+$ git add *.js
+//Agrega todos los archivos con extension asignada en este caso js
+
+$ git reset *.js
+//include todos los archivos a excepcion de tipo js
+
+
+$ git add "*.js"
+//Agrega todos los archivos modificados con extension asignada en este caso js
+
+$ git add --all
+//Agrega todos los archivos modificados 
+
+$ git add css/*.css
+//Agrega todos los archivos modificados con extension css dentro de la carpeta especificada
+
+$ git add css/
+//Agrega todos los archivos modificados dentro de la carpeta especificada
+
+
+$ git config --global alias.lg "--oneline --decorate --all --graph"
+//agrega un alias que ejecutara todo el comando asignado 
+
+
+$ git diff 
+// muestra las diferencias entre los cambios realizados
+
+$ git diff staged
+// muestra las diferecias apesar del que el archivo este en el staged
+
+$ git reset HEAD README.md 
+// quita el archivo del staged
+
+
+$ git checkout README.md 
+// regresa el archivo al ultimo commit
+
+$ git commit --amend -m "mensaje"
+//  Permite cambiar  el ultimo mensaje en el commit
+
+
+$ git reset --soft HEAD archivo.extension
+// Permite deshacer cambios a otro commit
+
+$ git lg
+
+//Muestra el historial de commits
+
+* 09684df (HEAD -> master) Agregamos a linterna verde archivo heroes
+* ffe6394 Se edito el archivo README
+* 927e4d3 agregamos las historias
+* 1ce8d4e Se agrego el archivo misiones
+* 1d35273 Se agregro el archivo heroes
+* 508b72a Se agrego archivo ciudades
+* a8bf3cd Se agrego el archivo readme
+
+$ git reset --soft 09684df 
+// Se revierte los cambios hasta el id especifico
+
+$ git reset --hard 508b72a 
+// Se revierte los cambios hasta el id especifico borrando 
+
+
+$ git reflog
+// muestra el historial completo incluyendo los reset que se hayan realizado
+
+$ git mv nombrearchivo.extension nombrenuevo.extension
+// cambiar nombre de archivo
+
+$ git rm nombrearchivo.extension 
+// borrar el archivo
+
+
+$ git -u
+// actualiza el status
+
+
+$ git branch nombredelarama
+// Crea una rama 
+
+$ git checkout nombredelarama
+// nos dirige a la rama de queremos
+
+$ git diff nombredelarama1 nombredelarama2
+// Muestra las diferencias
+
+$ git merge nombredelarama
+// une las ramas
+
+$ git branch -d nombredelarama
+// Borra la rama
+
+
+$ git checkout -b nombredelarama
+// Crea una rama y nos dirige a la rama 
+
+$ git tag nombredeltag
+// Crear un tag
+
+$ git tag -d nombredeltag
+// Borra un tag
+
+$ git tag -a nombredeltag -m "comentario"
+// Crea un tag con comentario
+
+
+* 09684df (HEAD -> master) Agregamos a linterna verde archivo heroes
+* ffe6394 Se edito el archivo README
+* 927e4d3 agregamos las historias
+* 1ce8d4e Se agrego el archivo misiones
+* 1d35273 Se agregro el archivo heroes
+* 508b72a Se agrego archivo ciudades
+* a8bf3cd Se agrego el archivo readme
+
+$ git tag -a nombredeltag id -m "comentario"
+// BCrea un tag con comentario posicionandose en el id
+
+
+$git stash
+// Crea una version del trabajo en progreso en caso de requerir cambios y no querer perder el avance
+
+$git stash pop
+//  Una vez se requiera recuperar los avancez del trabajo en progreso
+
+$git stash drop
+// se elimina el stash de referencia
+
+$git stash list
+// Muestra la lista da las referencias
+
+$git stash apply stash@{numnero de stash}
+// recupera un stash en especifico
+
+$git stash list --stat
+// Muestra la lista da las referencias  con las caracteristicas de los cambios
+
+$git show stash 
+//  muestra el ultimo cambio
+
+$git rebase master
+// mueve los stash realizados antes de los commit de la rama principal
+
+$git squash -i HEAD4 
+// el ultimo numero es la cantidad de commit que desees que aparezca
+// Une los commits, ya se los dos ultimos o el orden que desees desde el menu que aparece
+
+// dentro del menu de squas se puede utilizar el reword o r para cambiar el nombre del commit
+
+$ git rebase 
+// Nos permite entrar en un estado adicional para realzar modificaciones mas especificas para despues
+afectar el master 
+
+$git remote -v
+//Nos indica la url donde esta alojado 
+
+$git push -u origin master
+//Nos ayuda para no especificar la rama donde queremos hacer el push
+
+$git pull
+//se obtienen los archivos actualizados desde el repositorio
+
+$git clone
+//copia un repositorio
+
+$git clone urlrepositorio nombrenuevorepositorio
+
+
+
+$git fetch
+//Es una buena realizar un gi fetch antes de realzar un push ya que nos muestra los cambios 
+//que se han realizado en el repositorio se actializa nuestra copia local con git pull y posteriormente 
+//podemos hacer el git push
+
+
+
+Markdown archivos md
+
+
+# Titulo como un h1
+
+## subtitulo como un h2
+
+### subtitulo mas pequeño como un h3
+
+#### subtitulo mas pequeño como un h4
+
+*cursiva*
+_cursiva_
+
+**entre negritas**
+> cita
+
+Listas
+1. item
+2. item
+3. item
+
+
+lista sin orden o sublista
+    * subitem
+    * subitem
+    * subitem
+
+Imgen
+
+![nombreIMAGEN]( url de la imagen )
+
+
+Link
+[nombre]( url del link )
+
