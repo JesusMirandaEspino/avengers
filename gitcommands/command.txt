@@ -240,3 +240,6 @@ Imgen
 Link
 [nombre]( url del link )
 
+
+$ git remote prune origin
+// Para que en caso de se haya realizado alguna modificacion de borrar una rama por otro, tambien cuadre localmente
