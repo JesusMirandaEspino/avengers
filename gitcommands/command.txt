@@ -243,3 +243,8 @@ Link
 
 $ git remote prune origin
 // Para que en caso de se haya realizado alguna modificacion de borrar una rama por otro, tambien cuadre localmente
+
+
+# Versionamiento 
+// V.1.1.1
+//  Mayor.menor.parche
